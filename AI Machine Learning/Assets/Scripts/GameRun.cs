@@ -111,7 +111,7 @@ public class GameRun : MonoBehaviour
    	  	// Determine label of the character, return it
    	  	int label = 0;
    	  	if(chars[idx].name.StartsWith("frog")) label = 1;
-   	  	else if(chars[idx].name.StartsWith("oposum")) label = 2;
+   	  	else if(chars[idx].name.StartsWith("opossum")) label = 2;
 
     	return label;
     } 
@@ -178,11 +178,14 @@ public class GameRun : MonoBehaviour
                     rewardText = "WIN";
                     roundsWon++;
                     break;
-                case -2:
+                case -1f:
                     rewardText = "LOSE";
                     break;
                 case -0.1f:
                     rewardText = "DRAW";
+                    break;
+                case -2f:
+                    rewardText = "INVALID";
                     break;
             }
 
